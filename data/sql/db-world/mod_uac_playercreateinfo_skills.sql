@@ -22,9 +22,9 @@ INSERT INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`,
 
 -- New grants (no pre-existing row to widen) — reapply-safe, tagged like the rest of this file.
 DELETE FROM `playercreateinfo_skills` WHERE `comment` = 'mod-uac: starter gear skill (rykaerdoe fix)';
-INSERT INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`, `comment`) VALUES (81,   4,   172, 0, 'mod-uac: starter gear skill (rykaerdoe fix)');
-INSERT INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`, `comment`) VALUES (98,   16,  136, 0, 'mod-uac: starter gear skill (rykaerdoe fix)');
-INSERT INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`, `comment`) VALUES (1196, 256, 136, 0, 'mod-uac: starter gear skill (rykaerdoe fix)');
+INSERT IGNORE INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`, `comment`) VALUES (81,   4,   172, 0, 'mod-uac: starter gear skill (rykaerdoe fix)');
+INSERT IGNORE INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`, `comment`) VALUES (98,   16,  136, 0, 'mod-uac: starter gear skill (rykaerdoe fix)');
+INSERT IGNORE INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, `rank`, `comment`) VALUES (1196, 256, 136, 0, 'mod-uac: starter gear skill (rykaerdoe fix)');
 
 -- Widen existing narrow stock rows to include new-combo races that were
 -- cloned a matching weapon but excluded from the pre-existing skill mask.
